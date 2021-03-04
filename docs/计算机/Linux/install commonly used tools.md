@@ -91,6 +91,7 @@ Type=Application
 
 Name=Eclipse
 
+
 Comment=Eclipse Integrated Development Environment
 
 Icon=your path/icon.xpm
@@ -112,4 +113,59 @@ $>cd /usr/share/applications
 
 $>sudo ln -s /home/dezhou/SoftWares/eclipse /eclipse.desktop
 
-# **3.**   
+# **3.**   Install Mkdocs
+
+## 安装
+
+> pip3 install mkdocs
+
+使用系统默认的镜像安装会出现很多报错问题，如下：
+
+> Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProxyError('Cannot connect to proxy.', OSError(0, 'Error'))': /simple/lunr/  
+
+由于mkdocs安装过程中又会依赖其他的包，所以一个个手动下载不太现实。因此需要替换pip的安装镜像。
+
+找到pip3的congfig文件，pip.conf；我的文件位于~/.config/pip目录中
+
+编辑该文件，修改为如下
+
+> [global]
+> index-url = http://mirrors.aliyun.com/pypi/simple/
+> [install]
+> trusted-host=mirrors.aliyun.com
+
+这样便可以将pip的安装镜像替换为阿里镜像
+
+再执行#pip3 install mkdocs，便可安装成功
+
+## 问题
+
+安装完成后，发现直接再终端输入mkdocs显示：
+
+> bash: mkdocs：未找到命令
+
+这是因为mkdocs没有添加至P系统环境变量导致
+
+添加mkdocs至习系统环境变量
+
+在~/.bashrc文件末尾添加export PATH=/home/dezhou/.local/bin:$PATH，保存退出
+
+终端执行souce ~/.bashrc
+
+再次执行mkdocs，显示如下表明成功
+
+> Usage: mkdocs [OPTIONS] COMMAND [ARGS]...
+>
+>   MkDocs - Project documentation with Markdown.
+>
+> Options:
+>   -V, --version  Show the version and exit.
+>   -q, --quiet    Silence warnings
+>   -v, --verbose  Enable verbose output
+>   -h, --help     Show this message and exit.
+>
+> Commands:
+>   build      Build the MkDocs documentation
+>   gh-deploy  Deploy your documentation to GitHub Pages
+>   new        Create a new MkDocs project
+>   serve      Run the builtin development server

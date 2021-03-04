@@ -1,0 +1,36 @@
+site_name: Chase Dream House
+
+nav:
+    - 外语学习:
+        - 英语: 
+            - 互动课程入门: 外语/en/互动课程-入门级.md
+            - 平台课程入门: 外语/en/平台课程-入门级.md
+    - 算法:
+        - 算法基础: 计算机/Java/Java基础篇.md
+    - Java:
+        - Java 基础: 计算机/Java/Java基础篇.md
+        - Java 高阶: 计算机/Java/Java高阶篇.md
+    - Bodybuilding:
+        - 训练知识:
+            - 训练恢复:
+                - 泡沫轴的使用: bodybuilding/训练知识/训练恢复/泡沫轴的使用方法.md
+                - 延迟性肌肉疼痛: bodybuilding/训练知识/训练恢复/延迟性肌肉疼痛.md
+                - 训练小贴士: bodybuilding/训练知识/训练恢复/训练小贴士.md
+            - 训练计划:
+                - 分化训练: bodybuilding/训练知识/训练计划/分化训练.md
+                - 训练记录表: bodybuilding/训练知识/训练计划/训练记录表.md
+            - 训练误区:
+                - 深蹲不能过脚尖: bodybuilding/训练知识/训练误区/误区-深蹲不能过脚尖.md
+            - 增肌:
+                - 增肌的因素: bodybuilding/训练知识/增肌/the variable linked to growth.md
+        - 营养知识:
+            - 基础知识: bodybuilding/营养知识/基础知识.md
+            - 食物营养素: bodybuilding/营养知识/食物营养素.md
+
+theme:
+    name: cinder
+
+copyright: Copyright &copy; 2021 Charles Zhang, Maintained by the <a href="/about/release-notes/#maintenance-team">Chase Dream House</a>.
+
+plugins:
+    - search
