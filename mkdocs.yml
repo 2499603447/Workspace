@@ -6,26 +6,58 @@ nav:
             - 互动课程入门: 外语/en/互动课程-入门级.md
             - 平台课程入门: 外语/en/平台课程-入门级.md
     - 算法:
-        - 算法基础: 计算机/Java/Java基础篇.md
-    - Java:
-        - Java 基础: 计算机/Java/Java基础篇.md
-        - Java 高阶: 计算机/Java/Java高阶篇.md
-    - Bodybuilding:
-        - 训练知识:
-            - 训练恢复:
-                - 泡沫轴的使用: bodybuilding/训练知识/训练恢复/泡沫轴的使用方法.md
-                - 延迟性肌肉疼痛: bodybuilding/训练知识/训练恢复/延迟性肌肉疼痛.md
-                - 训练小贴士: bodybuilding/训练知识/训练恢复/训练小贴士.md
-            - 训练计划:
-                - 分化训练: bodybuilding/训练知识/训练计划/分化训练.md
-                - 训练记录表: bodybuilding/训练知识/训练计划/训练记录表.md
-            - 训练误区:
-                - 深蹲不能过脚尖: bodybuilding/训练知识/训练误区/误区-深蹲不能过脚尖.md
-            - 增肌:
-                - 增肌的因素: bodybuilding/训练知识/增肌/the variable linked to growth.md
-        - 营养知识:
-            - 基础知识: bodybuilding/营养知识/基础知识.md
-            - 食物营养素: bodybuilding/营养知识/食物营养素.md
+        - 原理:
+            - 排序: 算法/原理/Sort.md
+        - 题目:
+            - Leetcode: 算法/题目/leetcode.md
+            - Nowcode: 算法/题目/nowcode.md
+        - 课程学习:
+            - 300分钟搞定数据结构与算法: 算法/课程学习/300分钟搞定数据结构与算法.md
+        - 灵魂拷问: 算法/soulAsk.md
+    - 编程语言:
+        - Java:
+            - Java 基础: 编程语言/Java/Java基础/Java基础篇.md
+            - Java 高级特性: 编程语言/Java/Java高级特性/Java高阶篇.md
+            - Java 集合:
+                - Collections: 编程语言/Java/Java集合/Collection.md
+                - List: 编程语言/Java/Java集合/List.md
+                - Map: 编程语言/Java/Java集合/Map.md
+                - Set: 编程语言/Java/Java集合/Set.md
+                - Queue: 编程语言/Java/Java集合/Queue.md
+                - 废弃的集合: 编程语言/Java/Java集合/Deprecate.md
+                - 不同集合的比较: 编程语言/Java/Java集合/Comprision.md
+                - 灵魂拷问: 编程语言/Java/Java集合/soulAsk.md
+            - Java 异常: 编程语言/Java/Java异常/index.md
+            - Java 网络/IO:
+                - 灵魂拷问: 编程语言/Java/Java网络IO/soulAsk.md
+            - Java 并发:
+                - 灵魂拷问: 编程语言/Java/Java并发/soulAsk.md
+            - Java 虚拟机:
+                - 灵魂拷问: 编程语言/Java/Java虚拟机/soulAsk.md
+            - Java 源码分析:
+                - JDK: 编程语言/Java/Java源码分析/jdk/Java源码分析.md
+                - JVM: 编程语言/Java/Java源码分析/jvm/JVM源码分析.md
+            - Java 问题: 编程语言/Java/Java问题/Questions.md
+            - 灵魂拷问: 编程语言/Java/soulAsk.md
+    - 运动:
+        - 运动分类:
+            - 训练知识:
+                - 训练恢复:
+                    - 泡沫轴的使用: 运动/运动分类/训练知识/训练恢复/泡沫轴的使用方法.md
+                    - 延迟性肌肉疼痛: 运动/运动分类/训练知识/训练恢复/延迟性肌肉疼痛.md
+                    - 训练小贴士: 运动/运动分类/训练知识/训练恢复/训练小贴士.md
+                - 训练计划:
+                    - 分化训练: 运动/运动分类/训练知识/训练计划/分化训练.md
+                    - 训练记录表: 运动/运动分类/训练知识/训练计划/训练记录表.md
+                - 训练误区:
+                    - 深蹲不能过脚尖: 运动/运动分类/训练知识/训练误区/误区-深蹲不能过脚尖.md
+                - 增肌:
+                    - 增肌的因素: 运动/运动分类/训练知识/增肌/the variable linked to growth.md
+            #- 专业文献:
+        - 运动饮食:
+            - 营养知识:
+                - 基础知识: 运动/运动饮食/营养知识/基础知识.md
+                - 食物营养素: 运动/运动饮食/营养知识/食物营养素.md
 
 theme:
     name: cinder
