@@ -155,11 +155,11 @@ The results of a write by one thread are guaranteed to be **visible** to a read 
 
 所谓不可重入锁，即若当前线程执行某个方法已经获取了该锁，那么在方法中尝试再次获取锁时，就会获取不到被阻塞。我们尝试设计一个不可重入锁：
 
-![img](soulAsk.assets/clip_image056.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image056.png)
+![img](soulAsk.assets/clip_image056.png)
 
 使用该锁：
 
-![img](soulAsk.assets/clip_image058.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image058.png)
+![img](soulAsk.assets/clip_image058.png)
 
 当前线程执行print()方法首先获取lock，接下来执行doAdd()方法就无法执行doAdd()中的逻辑，必须先释放锁。这个例子很好的说明了不可重入锁。
 
@@ -169,7 +169,7 @@ The results of a write by one thread are guaranteed to be **visible** to a read 
 
 接下来，我们设计一种可重入锁
 
-![img](soulAsk.assets/clip_image060.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image060.png)
+![img](soulAsk.assets/clip_image060.png)
 
 所谓可重入，意味着线程可以进入它已经拥有的锁的同步代码块儿。
 
@@ -261,17 +261,17 @@ AtomicLong: 原子更新长整型
 
 不安全状态：如果不存在任何一个安全序列，则系统处于不安全状态。他们之间的对对应关系如下图所示：
 
-![img](soulAsk.assets/clip_image062.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image062.png)
+![img](soulAsk.assets/clip_image062.png)
 
 下面我们来通过一个例子对安全状态和不安全状态进行更深的了解
 
-![img](soulAsk.assets/clip_image064.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image064.png)
+![img](soulAsk.assets/clip_image064.png)
 
 如上图所示系统处于安全状态，系统剩余3个资源，可以把其中的2个分配给P3，此时P3已经获得了所有的资源，执行完毕后还能还给系统4个资源，此时系统剩余5个资源所以满足（P2所需的资源不超过系统当前剩余量与P3当前占有资源量之和），同理P1也可以在P2执行完毕后获得自己需要的资源。
 
 如果P1提出再申请一个资源的要求，系统从剩余的资源中分配一个给进程P1，此时系统剩余2个资源，新的状态图如下：那么是否仍是安全序列呢那我们来分析一下
 
-![img](soulAsk.assets/clip_image066.png)![img](file:///C:/Users/dezhou/AppData/Local/Temp/msohtmlclip1/01/clip_image067.png)
+![img](soulAsk.assets/clip_image066.png)
 
 系统当前剩余2个资源，分配给P3后P3执行完毕还给系统4个资源，但是P2需要5个资源，P1需要6个资源，他们都无法获得资源执行完成，因此找不到一个安全序列。此时系统转到了不安全状态。
 
@@ -295,7 +295,7 @@ Java中jdk 给我们提供了很便利的工具，帮助我们定位和分析死
 
 2、构建一个死锁的场景：
 
-![img](soulAsk.assets/clip_image069.jpg)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image069.jpg)
+![img](soulAsk.assets/clip_image069.jpg)
 
 可以看到运行时，一个线程持有A资源，希望使用B资源，而另一个线程持有B资源，希望使用A 资源，然后就陷入了相互等待的僵局，这样就形成了死锁。
 
@@ -305,23 +305,23 @@ Java中jdk 给我们提供了很便利的工具，帮助我们定位和分析死
 
 进入java安装的位置，输入Jconsole，然后弹出界面（或者进入安装目录/java/jdk1.70_80/bin/，点击Jconsole.exe）：
 
-![img](soulAsk.assets/clip_image071.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image071.png)
+![img](soulAsk.assets/clip_image071.png)
 
 然后点击进入：
 
-![img](soulAsk.assets/clip_image073.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image073.png)
+![img](soulAsk.assets/clip_image073.png)
 
 然后点击检测死锁：
 
-![img](soulAsk.assets/clip_image075.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image075.png)
+![img](soulAsk.assets/clip_image075.png)
 
 然后可以看到造成死锁的两个线程，以及死锁原因：
 
-![img](soulAsk.assets/clip_image077.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image077.png)
+![img](soulAsk.assets/clip_image077.png)
 
 Thread-0：持有java.lang.Class@1694ce18，需要java.lang.Class@1feb0edd，但是java.lang.Class@1feb0edd却被Thread-1持有，然后陷入等待。
 
-![img](soulAsk.assets/clip_image079.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image079.png)
+![img](soulAsk.assets/clip_image079.png)
 
 Thread-1：持有java.lang.Class@1feb0edd，需要java.lang.Class@1694ce18，但是java.lang.Class@1694ce18却被Thread-0持有，然后陷入等待。
 
@@ -341,7 +341,7 @@ Thread-1：持有java.lang.Class@1feb0edd，需要java.lang.Class@1694ce18，但
 
 查看死锁信息：
 
-![img](soulAsk.assets/clip_image087.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image087.png)
+![img](soulAsk.assets/clip_image087.png)
 
 ·    **volatile** **实现原理（禁止指令重排、刷新内存）**
 
@@ -355,7 +355,7 @@ Java语言提供了volatile，在某些情况下比锁要更加方便。如果�
 
 表2-1　CPU的术语定义
 
-![img](soulAsk.assets/clip_image089.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image089.png)
+![img](soulAsk.assets/clip_image089.png)
 
 内存模型相关概念
 
@@ -477,13 +477,17 @@ volatile可以保证线程可见性且提供了一定的有序性，但是无法
 
 对happen-before原则有了稍微的了解，我们再来回答这个问题JVM是如何禁止重排序的？
 
-[![img](soulAsk.assets/clip_image093.jpg)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image093.jpg)](http://cmsblogs.qiniudn.com/wp-content/uploads/2017/02/20170104-volatile-1.jpg /o /20170104-volatile/ /t _blank)
+![img](soulAsk.assets/clip_image093.jpg)
+
+(http://cmsblogs.qiniudn.com/wp-content/uploads/2017/02/20170104-volatile-1.jpg /o /20170104-volatile/ /t _blank)
 
 观察加入volatile关键字和没有加入volatile关键字时所生成的汇编代码发现，加入volatile关键字时，会多出一个lock前缀指令。lock前缀指令其实就相当于一个内存屏障。内存屏障是一组处理指令，用来实现对内存操作的顺序限制。volatile的底层就是通过内存屏障来实现的。下图是完成上述规则所需要的内存屏障：
 
 volatile暂且下分析到这里，JMM体系较为庞大，不是三言两语能够说清楚的，后面会结合JMM再一次对volatile深入分析。
 
-[![img](soulAsk.assets/clip_image095.jpg)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image095.jpg)](http://cmsblogs.qiniudn.com/wp-content/uploads/2017/02/20170104-volatile2-1.jpg /o /20170104-volatile2/ /t _blank)
+[![img](soulAsk.assets/clip_image095.jpg)
+
+(http://cmsblogs.qiniudn.com/wp-content/uploads/2017/02/20170104-volatile2-1.jpg /o /20170104-volatile2/ /t _blank)
 
 总结
 
@@ -715,7 +719,7 @@ JDK 1.6引入了更加聪明的自旋锁，即自适应自旋锁。所谓自适�
 
 3、线程状态：
 
-![img](soulAsk.assets/clip_image096.jpg)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image096.jpg)
+![img](soulAsk.assets/clip_image096.jpg)
 
 线程总共有5大状态，通过上面第二个知识点的介绍，理解起来就简单了。
 
@@ -757,7 +761,7 @@ Lock详细介绍与Demo
 
 以下是Lock接口的源码，笔者修剪之后的结果：
 
-![img](soulAsk.assets/clip_image098.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image098.png)
+![img](soulAsk.assets/clip_image098.png)
 
 从Lock接口中我们可以从方法的功能从注释中看出：
 
@@ -773,11 +777,11 @@ Lock详细介绍与Demo
 
 lock()：
 
-![img](soulAsk.assets/clip_image100.jpg)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image100.jpg)
+![img](soulAsk.assets/clip_image100.jpg)
 
 tryLock():
 
-![img](soulAsk.assets/clip_image102.jpg)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image102.jpg)
+![img](soulAsk.assets/clip_image102.jpg)
 
 看到这里相信大家也都会使用如何使用Lock了吧，关于tryLock(long time, TimeUnit unit)和lockInterruptibly()不再赘述。前者主要存在一个等待时间，在测试代码中写入一个等待时间，后者主要是等待中断，会抛出一个中断异常，常用度不高，喜欢探究可以自己深入研究。
 
@@ -789,7 +793,7 @@ tryLock():
 
 从以上源码可以看出在Lock中可以自己控制锁是否公平，而且，默认的是非公平锁，以下是ReentrantLock的构造函数：
 
- ![img](soulAsk.assets/clip_image107.jpg)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image107.jpg)
+ ![img](soulAsk.assets/clip_image107.jpg)
 
  
 
@@ -797,11 +801,11 @@ tryLock():
 
 synchronized：我们知道java是用字节码指令来控制程序（这里不包括热点代码编译成机器码）。在字节指令中，存在有synchronized所包含的代码块，那么会形成2段流程的执行。 
 
-![img](soulAsk.assets/clip_image108.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image108.png)
+![img](soulAsk.assets/clip_image108.png)
 
 我们点击查看SyncDemo.java的源码SyncDemo.class，可以看到如下： 
 
-![img](soulAsk.assets/clip_image109.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image109.png)
+![img](soulAsk.assets/clip_image109.png)
 
 如上就是这段代码段字节码指令，没你想的那么难吧。言归正传，我们可以清晰段看到，其实synchronized映射成字节码指令就是增加来两个指令：monitorenter和monitorexit。当一条线程进行执行的遇到monitorenter指令的时候，它会去尝试获得锁，如果获得锁那么锁计数+1（为什么会加一呢，因为它是一个可重入锁，所以需要用这个锁计数判断锁的情况），如果没有获得锁，那么阻塞。当它遇到monitorexit的时候，锁计数器-1，当计数器为0，那么就释放锁。
 
@@ -835,11 +839,11 @@ Lock：Lock实现和synchronized不一样，后者是一种悲观锁，它胆子
 
 在jdk1.5以前，我们的String字符串拼接操作其实底层是StringBuffer来实现的（这个大家可以用我前面介绍的方法，写一个简单的demo，然后查看class文件中的字节码指令就清楚了），而在jdk1.5之后，那么是用StringBuilder来拼接的。我们考虑前面的情况，比如如下代码：
 
-![img](soulAsk.assets/clip_image110.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image110.png)
+![img](soulAsk.assets/clip_image110.png)
 
 底层实现会变成这样：
 
-![img](soulAsk.assets/clip_image111.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image111.png)
+![img](soulAsk.assets/clip_image111.png)
 
 我们知道，StringBuffer是一个线程安全的类，也就是说两个append方法都会同步，通过指针逃逸分析（就是变量不会外泄），我们发现在这段代码并不存在线程安全问题，这个时候就会把这个同步锁消除。
 
@@ -869,11 +873,11 @@ java.util.concurrent.atomic包一共提供了13个类，属于4中类型的原�
 
 \>java.util.concurrent.atomic包提供了以下3个类：
 
-![img](soulAsk.assets/clip_image112.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image112.png)
+![img](soulAsk.assets/clip_image112.png)
 
 以上三个类提供的方法几乎一样，下面只分析AtomicInteger：
 
-![img](soulAsk.assets/clip_image113.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image113.png)
+![img](soulAsk.assets/clip_image113.png)
 
 **通过getAndIncrement方法来看看实现原理：**
 
@@ -1202,7 +1206,7 @@ CAS是一个原子操作，用于多线程环境下的同步，通过比较内�
 
 线程1准备用CAS将变量的值由A替换为B，在此之前，线程2将变量的值由A替换为C，又由C替换为A，然后线程1执行CAS时发现变量的值仍然为A，所以CAS成功。但实际上这时的现场已经和最初不同了，尽管CAS成功，但可能存在潜藏的问题，下面的链表替换问题虽然不是太准确，但是能大体上阐明这个过程的变化：
 
-![img](soulAsk.assets/clip_image114.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image114.png)
+![img](soulAsk.assets/clip_image114.png)
 
 现有一个用单向链表实现的堆栈，栈顶为A，这时线程T1已经知道A.next为B，然后希望用CAS将栈顶替换为B：
 
@@ -1210,11 +1214,11 @@ head.compareAndSet(A,B);
 
 在T1执行上面这条指令之前，线程T2介入，将A、B出栈，再pushD、C、A，此时堆栈结构如下图，而对象B此时处于游离状态：
 
-![img](soulAsk.assets/clip_image115.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image115.png)
+![img](soulAsk.assets/clip_image115.png)
 
 此时轮到线程T1执行CAS操作，检测发现栈顶仍为A，所以CAS成功，栈顶变为B，但实际上B.next为null，所以此时的情况变为：
 
-![img](soulAsk.assets/clip_image116.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image116.png)
+![img](soulAsk.assets/clip_image116.png)
 
 其中堆栈中只有B一个元素，C和D组成的链表不再存在于堆栈中，平白无故就把C、D丢掉了。
 

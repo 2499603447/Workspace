@@ -8,7 +8,7 @@
 
 ## 讲讲线程池的实现原理
 
-![img](threads.assets/clip_image127.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image127.png)
+![img](threads.assets/clip_image127.png)
 
 一个线程从被提交（submit）到执行共经历以下流程：
 
@@ -22,7 +22,7 @@
 
 线程池在执行excute方法时，主要有以下四种情况
 
-![img](threads.assets/clip_image129.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image129.png)
+![img](threads.assets/clip_image129.png)
 
  
 
@@ -42,7 +42,7 @@
 
 Execute方法
 
-![img](threads.assets/clip_image131.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image131.png)
+![img](threads.assets/clip_image131.png)
 
 从源码中可以看到提交任务的这一过程基本与第二个图的四个流程是一致的，需要检查的是当前工作线程的数量与核心线程数量的关系，来决定提交任务的方式或者是拒绝任务提交。而具体任务的提交工作是在addWorker方法中。在这里面看到了recheck这样的变量，这是在执行了一些动作失败后再次检查线程池的状态，因为在这期间可能有线程池关闭获得线程池饱和等状态的改变。
 
@@ -54,11 +54,11 @@ Execute方法
 
 这个方法是任务提交的一个核心方法。在里面完成了状态检查、新建任务、执行任务等一系列动作。它有两个参数，第一个参数是提交的任务，第二个参数是一个标识符，标识在检查工作线程数量的时候是应该与corePoolSize对比还是应该maximumPoolSize对比。
 
-![img](threads.assets/clip_image133.jpg)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image133.jpg)
+![img](threads.assets/clip_image133.jpg)
 
 这个方法可以分为两个阶段来看，第一个阶段是判断是否有必要新增一个工作线程，如果有则利用CAS更新工作线程的数量；第二部分是将提交的任务封装成一个工作线程Worker然后加入到线程池的容器中，开始执行新提交的任务。这个Worker在执行完任务后，还会循环地获取工作队列里的任务来执行。下面来看一下Worker的构造方法就能更好地理解上面的代码了
 
-![img](threads.assets/clip_image135.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image135.png)
+![img](threads.assets/clip_image135.png)
 
  
 
@@ -66,11 +66,11 @@ Execute方法
 
 在addWorker方法快要结束的地方，调用了t.start()方法，我们知道它实际执行的就是Worker对象的run()方法，而worker的run()方法是这样定义的：
 
-![img](threads.assets/clip_image137.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image137.png)
+![img](threads.assets/clip_image137.png)
 
 它实际上是将自己委托给线程池的runWorker方法
 
-![img](threads.assets/clip_image139.jpg)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image139.jpg)
+![img](threads.assets/clip_image139.jpg)
 
 这个方法呢也比较好理解，它在不断执行我们提交的任务的run方法。而这个任务可能是我们新提交的，也有可能是从等待队列中获取的。这样就实现了线程池的完成逻辑。
 
@@ -78,17 +78,17 @@ Execute方法
 
 **（**[**https://blog.csdn.net/w2393040183/article/details/52177572**](https://blog.csdn.net/w2393040183/article/details/52177572)**）**
 
-![img](threads.assets/clip_image141.jpg)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image141.jpg)
+![img](threads.assets/clip_image141.jpg)
 
-![img](threads.assets/clip_image143.jpg)![img](file:///C:/Users/dezhou/AppData/Local/Temp/msohtmlclip1/01/clip_image144.jpg)
+![img](threads.assets/clip_image143.jpg)
 
-![img](threads.assets/clip_image146.jpg)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image146.jpg)
+![img](threads.assets/clip_image146.jpg)
 
-![img](threads.assets/clip_image148.jpg)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image148.jpg)
+![img](threads.assets/clip_image148.jpg)
 
 ## 线程的生命周期，状态是如何转移的
 
-![img](threads.assets/clip_image149.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image149.png)
+![img](threads.assets/clip_image149.png)
 
 1、线程的生命周期：新建（New）、就绪（Runnable）、运行（Running）、阻塞（Blocked）和死亡（Dead）5种状态。
 

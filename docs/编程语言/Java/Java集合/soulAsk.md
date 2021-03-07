@@ -116,7 +116,7 @@ System.out.println(map.get(person));
 
 # HashMap 的工作原理及代码实现，什么时候用到红黑树
 
-![img](SoulAsk.assets/clip_image054.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image054.png)
+![img](SoulAsk.assets/clip_image054.png)
 
 # 多线程情况下HashMap死循环的问题
 

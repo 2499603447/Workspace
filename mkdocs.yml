@@ -35,7 +35,7 @@ nav:
             - Java 虚拟机:
                 - 灵魂拷问: 编程语言/Java/Java虚拟机/soulAsk.md
             - Java 源码分析:
-                - JDK: 编程语言/Java/Java源码分析/jdk/Java源码分析.md
+                - JDK: 编程语言/Java/Java源码分析/jdk/JDK源码分析.md
                 - JVM: 编程语言/Java/Java源码分析/jvm/JVM源码分析.md
             - Java 问题: 编程语言/Java/Java问题/Questions.md
             - 灵魂拷问: 编程语言/Java/soulAsk.md

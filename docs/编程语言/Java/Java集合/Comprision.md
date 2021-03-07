@@ -12,7 +12,7 @@ java中List接口的实现包括ArrayList，Vector，LinkedList；Set接口的�
 
   往Set中add对象时，会调用Hashset中的add方法，然后会调用map的put方法，再调用putVal方法，具体干了什么，我们可以通过阅读源码，一目了然（位于java.util包中的HashMap.class中的第625行开始）：
 
-![img](Comprision.assets/clip_image030.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image030.png)
+![img](Comprision.assets/clip_image030.png)
 
 # List 和 Map 区别
 
@@ -56,7 +56,7 @@ WeakHashMao ：弱键(weak key)Map，Map中使用的对象也被允许释放: �
 
 IdentifyHashMap： : 使用==代替equals()对“键”作比较的hash map。专为解决特殊问题而设计。
 
-![img](Comprision.assets/clip_image032.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image032.png)
+![img](Comprision.assets/clip_image032.png)
 
  
 
@@ -80,15 +80,15 @@ IdentifyHashMap： : 使用==代替equals()对“键”作比较的hash map。�
 
    --TreeMap
 
-![img](Comprision.assets/clip_image033.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image033.png)
+![img](Comprision.assets/clip_image033.png)
 
  
 
-![img](Comprision.assets/clip_image034.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image034.png)
+![img](Comprision.assets/clip_image034.png)
 
  
 
-![img](Comprision.assets/clip_image035.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image035.png)
+![img](Comprision.assets/clip_image035.png)
 
 **其他特征**
 
@@ -156,9 +156,9 @@ vector容器确切知道它所持有的对象隶属什么型别。vector不进�
 
 只需重新封装一下LinkedList中的addFirst和addLast方法即可
 
-![img](Comprision.assets/clip_image036.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image036.png)
+![img](Comprision.assets/clip_image036.png)
 
-![img](Comprision.assets/clip_image037.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image037.png)
+![img](Comprision.assets/clip_image037.png)
 
 # ArrayList 与 Vector 区别
 
@@ -182,7 +182,7 @@ ArrayList：
 
 Vector：
 
-![img](Comprision.assets/clip_image042.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image042.png)
+![img](Comprision.assets/clip_image042.png)
 
  
 
@@ -200,7 +200,7 @@ HashMap和Hashtable都实现了Map接口，但它们之间有一些重要的区�
 
 \2. HashMap和Hashtable的主要区别之一是HashMap是非同步的，而Hashtable是同步的，这意味着Hashtable是线程安全的，可以在多个线程之间共享，但HashMap不能在没有正确同步的情况下在多个线程之间共享。 Java 5引入了ConcurrentHashMap，它是Hashtable的一个替代方案，并提供比Java中的Hashtable更好的可伸缩性。
 
-![img](Comprision.assets/clip_image043.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image043.png)
+![img](Comprision.assets/clip_image043.png)
 
 \3. HashMap和Hashtable的另一个显着区别是，HashMap中的迭代器是一个快速迭代器，而Hashtable的枚举器不是，并且如果任何其他线程通过添加或删除元素，而非通过Iterator自身的remove()修改映射，则抛出ConcurrentModificationException。但是，这不是一个有保证的行为，并将尽最大努力由JVM完成。这也是Java中的Enumeration和Iterator之间的一个重要区别。
 
@@ -232,21 +232,21 @@ Map m = Collections.synchronizeMap(hashMap);
 
 # HashSet 和 HashMap 区别
 
-![img](Comprision.assets/clip_image044.png)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image044.png)
+![img](Comprision.assets/clip_image044.png)
 
 **HashMap**是实现Map<K,V>接口的一个实体类，它对键值做了一对一的映射关系，当然里面键值不能重复。Map 接口提供三种collection 视图，允许以键集、值集或键-值映射关系集的形式查看某个映射的内容。映射顺序 定义为迭代器在映射的 collection 视图上返回其元素的顺序。某些映射实现可明确保证其顺序，如 TreeMap 类；另一些映射实现则不保证顺序，如 HashMap 类。
 
-![img](Comprision.assets/clip_image046.jpg)![img](file:///C:/Users/dezhou/AppData/Local/Temp/msohtmlclip1/01/clip_image048.jpg)![img](file:///C:/Users/dezhou/AppData/Local/Temp/msohtmlclip1/01/clip_image049.jpg)
+![img](Comprision.assets/clip_image046.jpg)
 
 **HashSet**是实现Set<E>接口的一个实体类，数据是以哈希表的形式存放的，里面的不能包含重复数据。Set接口是一种一个不包含重复元素的 collection。
 
-![img](Comprision.assets/clip_image051.jpg)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image051.jpg)
+![img](Comprision.assets/clip_image051.jpg)
 
  
 
 **两者之间的的区别？**
 
-![img](Comprision.assets/clip_image053.jpg)![img](../../../%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA/Java/Java%25E5%259F%25BA%25E7%25A1%2580%25E7%25AF%2587.assets/clip_image053.jpg)
+![img](Comprision.assets/clip_image053.jpg)
 
 # HashMap 和 ConcurrentHashMap 的区别
 
