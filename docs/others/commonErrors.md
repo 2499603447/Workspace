@@ -1,6 +1,6 @@
-# **1.Terminal error:**
+# Terminal error
 
-**1).Like sudo apt-get update****：Could not get lock /var/lib/apt/lists/lock**
+## Like sudo apt-get update：Could not get lock /var/lib/apt/lists/lock
 
 method1:
 
@@ -16,9 +16,7 @@ list prosesses。Find which PID contains apt-get or wget，
 
 $>sudo kill PID
 
- 
-
-**2).Gedit Chinese messy code**
+## Gedit Chinese messy code
 
 Download dconf-editor: sudo apt-get install dconf-editor, 
 
@@ -34,19 +32,23 @@ gsettings set org.gnome.gedit.preferences.encodings candidate-encodings "['GB180
 
 gsettings set org.gnome.gedit.preferences.encodings shown-in-menu "['GB18030', 'GB2312', 'GBK', 'UTF-8', 'BIG5', 'CURRENT', 'UTF-16']"
 
-# **2.The volume “boot” has only 3.9MB disk space remaining.**
+## sudo: add-apt-repository：找不到命令
+
+> sudo apt-get install software-properties-common
+
+# The volume “boot” has only 3.9MB disk space remaining
 
 **1).$>dpkg --get-selections |grep linux-image**
 
 **check installed linux kernel image**
 
-![img](solutions to some errors.assets/clip_image002.jpg)
+![img](commonErrors.assets/clip_image002.jpg)
 
 **2). $>uname -a**
 
 **check which image you current using**
 
-![img](solutions to some errors.assets/clip_image004.jpg)
+![img](commonErrors.assets/clip_image004.jpg)
 
 **3).$> sudo apt-get purge linux-image-4.4.0-21-generic**
 
@@ -56,15 +58,15 @@ gsettings set org.gnome.gedit.preferences.encodings shown-in-menu "['GB18030', '
 
 **check current image status**
 
-![img](solutions to some errors.assets/clip_image006.jpg)
+![img](commonErrors.assets/clip_image006.jpg)
 
 **5). $>df -lh **
 
 **show disk status**
 
-![img](solutions to some errors.assets/clip_image007.png)
+![img](commonErrors.assets/clip_image007.png)
 
-# **3. Grub error: no such partition**
+# Grub error: no such partition
 
 Input “**set**”, click Enter, terminal window will show message as below:
 

@@ -70,6 +70,70 @@ $>java -version
 
 $>javac -version
 
+下载JDK的tar.gz包标题
+加粗样式官网下载最新的JDK:https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
+
+这里进入官网
+
+PS:最新版本为jdk-8u241-linux-x64(现在下载还要登录Orz…)
+
+解压压缩包
+进入下载目录
+
+cd ~/Download
+
+解压tar.gz包
+
+tar -zxvf jdk-8u241-linux-x64.tar.gz
+
+安装JDK
+sudo mv jdk1.8.0_241 /usr/lib/jvm/jdk1.8.0_241
+
+JDK环境变量配置
+修改配置文件
+sudo vim /etc/profile
+在文件的末尾增加内容
+
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_241
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+1
+2
+3
+4
+使配置生效
+source /etc/profile
+
+测试
+查看JAVA版本
+
+java -version
+输出
+
+java version "1.8.0_241"
+Java(TM) SE Runtime Environment (build 1.8.0_241-b07)
+Java HotSpot(TM) 64-Bit Server VM (build 25.241-b07, mixed mode)
+1
+2
+3
+如上输出即表示已经正确安装，但是，不要着急，测试下是不是会出现再打开一个终端就会出现无法识别java命令的情况呢？如果是，那就还有最后一步。
+
+解决每次都要source /etc/profile的问题
+vim ~/.bashrc
+以下两种放方法都可以，推荐第二种方式。
+
+在里面添加配置环境变量
+
+在里面添加一句：
+
+source /etc/profile
+1
+ 如果打开不同的终端输入java -version都没有问题的话就是可以了。
+————————————————
+版权声明：本文为CSDN博主「尖齿柠檬鲨」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/teolih/article/details/104112942
+
 # **2.**  **Install Eclipse**
 
 **Firstly, Install**

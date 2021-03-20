@@ -102,7 +102,7 @@
 语法：
 
 ```bash
-![图片alt](图片地址 ''图片title'')
+![图片alt](图片地址 "图片title")
 
 图片alt就是显示在图片下面的文字，相当于对图片内容的解释。
 图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加
@@ -117,9 +117,7 @@ u=702257389,1274025419&fm=27&gp=0.jpg "区块链")
 
 效果如下：
 
-![img](https:////upload-images.jianshu.io/upload_images/6860761-fd2f51090a890873.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/550/format/webp)
-
-blockchain
+![blockchain](commonUtils.assets/6860761-fd2f51090a890873.webp)
 
 **上传本地图片直接点击导航栏的图片标志，选择图片即可**
 
@@ -389,7 +387,7 @@ function符号:ƒ可以轻松得打出函数式：ƒ(x)=x+1
 
 以及更多的特殊符号都可以打出，就不一一列举了，想要了解更多特殊符号的打法请查阅下面这个链接：[HTML中的特殊符号](https://link.jianshu.com?t=http://blog.csdn.net/html5_/article/details/21639475)
 
-![image-20200130134500768](markdown使用手册.assets/image-20200130134500768.png)
+![image-20200130134500768](commonUtils.assets/image-20200130134500768.png)
 
 # 十二 文内跳转
 
