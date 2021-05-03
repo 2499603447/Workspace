@@ -331,3 +331,35 @@ systemctl enable tomcat.service
 
 # 通过域名访问tomcat服务器
 
+## 替换localhost为域名
+
+* 替换Engine节点下的defaultHost中的localhost为域名
+
+  替换前：
+
+  ![image-20210321123534582](env.assets/image-20210321123534582.png)
+
+  替换后：
+
+  ![image-20210321123647543](env.assets/image-20210321123647543.png)
+
+* 替换Host节点中的name为域名
+
+  ![image-20210321124228599](env.assets/image-20210321124228599.png)
+
+* 在Host节点的结束标识符之前增加Context
+
+  <Context path="" docBase="site" reloadable="false"></Context>
+
+## 替换8080端口为80
+
+# 文件传输
+
+## 安装puty
+
+> $ sudo apt-get install putty
+
+## 拷贝项目至云服务器
+
+> $ pscp site.tgz root@xxx.xxx.xxx.xxx:/usr/share/tomcat/webapps
+
