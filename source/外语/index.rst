@@ -11,5 +11,4 @@
    :maxdepth: 2
    :glob:
 
-   前言
-   灵魂拷问
+   en/index
