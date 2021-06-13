@@ -22,7 +22,7 @@
 
 ### Symbols
 
-<img src="assets/image-20210530130258720.png" alt="image-20210530130258720" align="left" title="请谨慎使用此术语" />  **& (与标记符)**
+<img src="../assets/warning_black_24dp.svg" alt="warning_black_24dp" align="left" title="请谨慎使用此术语"  />  **& (与标记符)**
 
 在标题，文本，导航栏或者目录中，请勿使用&替代和；但是，在使用&引用UI元素时，或者在由于空间限制需要使用缩写的表标题和图表标签中，可以使用&。当然，在代码中使用&也是可以的。
 
@@ -34,11 +34,11 @@
 
 **A/B testing**
 
-<img src="assets/image-20210530130258720.png" alt="image-20210530130258720" align="left" title="请谨慎使用此术语" /> **abnormal**
+<img src="../assets/warning_black_24dp.svg" alt="warning_black_24dp" align="left" title="请谨慎使用此术语"  /> **abnormal**
 
 不要用来指一个人。用来指计算机系统的一种状态是可以的。
 
-<img src="assets/image-20210530130258720.png" alt="image-20210530130258720" align="left" title="请谨慎使用此术语" />**abort**
+<img src="../assets/warning_black_24dp.svg" alt="warning_black_24dp" align="left" title="请谨慎使用此术语"  />**abort**
 
 一般避免使用。相反，使用像stop、exit、cancel或end这样的词。在Linux中，abort是指终止异常进程的一种信号。
 

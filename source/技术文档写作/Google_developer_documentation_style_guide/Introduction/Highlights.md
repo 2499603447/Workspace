@@ -33,7 +33,7 @@
 
 ## 图片
 
-* [使用SVG](..\Formatting_and_organization\Figures_and_other_images.md)文件或者[Crushed-PNG](https://en.wikipedia.org/wiki/Pngcrush)图像
+* [使用SVG](..\Formatting_and_organization\Figures_and_other_images.md)文件或者[Crushed-PNG](https://en.wikipedia.org/wiki/Pngcrush)![open_in_new_black_24dp](../../../assets/icons/open_in_new_black_24dp.svg)图像
 * [提供可替代的文本](..\Formatting_and_organization\Figures_and_other_images.md)
 * 实际使用时[提供高分辨率的图像](..\Formatting_and_organization\Figures_and_other_images.md)
 

@@ -1,9 +1,8 @@
-技术文档写作
+通用准则
 =================================================
 
 .. toctree::
    :maxdepth: 2
    :glob:
 
-   Introduction
-   Google_developer_documentation_style_guide/index
+   Accessibility

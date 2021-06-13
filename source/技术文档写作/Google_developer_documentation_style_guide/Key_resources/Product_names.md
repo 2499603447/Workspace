@@ -20,21 +20,21 @@
 
 不要在产品名称之前使用，除非您使用该名称来限定其他一些东西。在工具和API名称前使用。
 
-![image-20210530140440770](../assets/image-20210530140440770.png)**Recommended:** Using Cloud Datastore with Cloud Dataproc
+![thumb_up_black_24dp](../assets/thumb_up_black_24dp.svg)**Recommended:** Using Cloud Datastore with Cloud Dataproc
 
-![image-20210530140440770](../assets/image-20210530140440770.png)**Recommended:** The Cloud Datastore options page
+![thumb_up_black_24dp](../assets/thumb_up_black_24dp.svg)**Recommended:** The Cloud Datastore options page
 
-![image-20210530140440770](../assets/image-20210530140440770.png)**Recommended:** The Google Cloud Console
+![thumb_up_black_24dp](../assets/thumb_up_black_24dp.svg)**Recommended:** The Google Cloud Console
 
-![image-20210530140440770](../assets/image-20210530140440770.png)**Recommended:** The Transcoder API
+![thumb_up_black_24dp](../assets/thumb_up_black_24dp.svg)**Recommended:** The Transcoder API
 
-![image-20210530140440770](../assets/image-20210530140440770.png)**Recommended:** The `gcloud` command-line tool
+![thumb_up_black_24dp](../assets/thumb_up_black_24dp.svg)**Recommended:** The `gcloud` command-line tool
 
-![image-20210530140610116](../assets/image-20210530140610116.png)**Not Recommended:** Using the Cloud Datastore with Cloud Dataproc
+![thumb_down_black_24dp](../assets/thumb_down_black_24dp.svg)**Not Recommended:** Using the Cloud Datastore with Cloud Dataproc
 
 ## 使用“服务”来指代多个产品
 
-可以将Google产品称为服务，例如*Google Kubernetes Engine**服务*或*Compute Engine服务*。但是，如果术语“*服务”*导致歧义，请使用产品名称。
+可以将Google产品称为服务，例如*Google Kubernetes Engine服务*或*Compute Engine服务*。但是，如果术语“*服务”*导致歧义，请使用产品名称。
 
 ## 使用产品名称作为动词
 

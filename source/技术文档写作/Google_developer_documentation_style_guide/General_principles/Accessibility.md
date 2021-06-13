@@ -2,7 +2,7 @@
 
 **要点：**编写适合残疾人士使用的文档。
 
-我们在编写开发文档时会考虑到文档的可访问性。本页面并不是非常详尽的参考资料，但是描述了一些通用的准则和示例用于说明遵循的最佳的做法。[世界卫生组织](https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health)估计15%的世界人口（超过1亿人口）有无障碍的需求。当文档在编写时就考虑到了可访问性，那么它将会改善所有读者的整体体验。
+我们在编写开发文档时会考虑到文档的可访问性。本页面并不是非常详尽的参考资料，但是描述了一些通用的准则和示例用于说明遵循的最佳的做法。[世界卫生组织](https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health)![open_in_new_black_24dp](../../../assets/icons/open_in_new_black_24dp.svg)估计15%的世界人口（超过1亿人口)有无障碍的需求。当文档在编写时就考虑到了可访问性，那么它将会改善所有读者的整体体验。
 
 ## 一般注意事项
 
@@ -10,11 +10,11 @@
 
 * 确保读者只需要使用键盘就可以访问文档的所有部分（包括选项卡，表单提交按钮和交互元素），而无需使用鼠标或者轨迹板。
 
-* 使用屏幕阅读器测试文档。这种测试会帮助您发现文档内容中的无障碍方面的问题，且是一个自我编辑文档内容的好方法。要适用屏幕阅读器，请参阅[屏幕阅读器列表](https://en.wikipedia.org/wiki/List_of_screen_readers)。
+* 使用屏幕阅读器测试文档。这种测试会帮助您发现文档内容中的无障碍方面的问题，且是一个自我编辑文档内容的好方法。要适用屏幕阅读器，请参阅[屏幕阅读器列表](https://en.wikipedia.org/wiki/List_of_screen_readers)![open_in_new_black_24dp](../../../assets/icons/open_in_new_black_24dp.svg)。
 
 * 在HTML中，使用[语义标签](..\HTML_and_CSS\HTML_and_semantic_tagging.md)。例如，使用`<em>`元素仅表示强调，而不是表示斜体。
 
-* 在HTML中，首选[原生样式](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)而不是自定义样式。
+* 在HTML中，首选[原生样式](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)![open_in_new_black_24dp](../../../assets/icons/open_in_new_black_24dp.svg)而不是自定义样式。
 
 * 去除非必要的字体格式。（屏幕阅读器会明确描述文本的修改。）
 
@@ -22,7 +22,7 @@
 
 * 在句子和段落中不要强制换行。换行符在调整窗口大小或者放大的文本中可能无法正常工作。
 
-* 尽可能避免[驼峰大小写](https://en.wikipedia.org/wiki/Camel_case)以及[全大写](https://en.wikipedia.org/wiki/All_caps)的方式。有些屏幕阅读器会单独朗读大写字母，有些语言的字母只有[单个表示方式](https://en.wikipedia.org/wiki/Unicase)，没有大小写之分。遵循[大写](..\Language_and_grammar\Capitalization.md)准则。
+* 尽可能避免[驼峰大小写](https://en.wikipedia.org/wiki/Camel_case)![open_in_new_black_24dp](../../../assets/icons/open_in_new_black_24dp.svg)以及[全大写](https://en.wikipedia.org/wiki/All_caps)![open_in_new_black_24dp](../../../assets/icons/open_in_new_black_24dp.svg)的方式。有些屏幕阅读器会单独朗读大写字母，有些语言的字母只有[单个表示方式](https://en.wikipedia.org/wiki/Unicase)![open_in_new_black_24dp](../../../assets/icons/open_in_new_black_24dp.svg)，没有大小写之分。遵循[大写](..\Language_and_grammar\Capitalization.md)准则。
 
 * 根据屏幕阅读器（或个人设置）的不同，并非所有标点符号都
 
@@ -44,9 +44,9 @@
 
 * 使用清晰、直接的语言。避免使用双重否定和例外的例外。
 
-  ![image-20210530140440770](../assets/image-20210530140440770.png) **推荐：** You can continue without a path。
+  ![image-20210530140440770](../assets/thumb_up_black_24dp.svg) **推荐：** You can continue without a path。
 
-  ![image-20210530140610116](../assets/image-20210530140610116.png) **不推荐：** A missing path won't prevent you from continuing.
+  ![image-20210530140610116](../assets/thumb_down_black_24dp.svg) **不推荐：** A missing path won't prevent you from continuing.
 
 ## 章节标题和大标题
 
@@ -93,6 +93,8 @@
 * 图标是表示对象或函数的符号或图像。有关图标的使用信息，请参阅UI元素和交互页面的[按钮和图标](..\Computer_interfaces\UI_elements_and_interaction.md)部分。
 
 ## UI导航
+
+当使用尖括号（>）记录菜单路径时，请添加[`arial-label`标签属性](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html)。因为有些屏幕阅读器会把此符号解释为大于号或者键盘的向右箭头。有关更多的信息和示例，请参阅[菜单栏](..\Computer_interfaces\UI_elements_and_interaction.md)。
 
 ## 表格
 

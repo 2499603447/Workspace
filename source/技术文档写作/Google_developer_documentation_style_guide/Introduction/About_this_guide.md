@@ -20,9 +20,9 @@
 
    | 问题类型   | 三方参考                                                     |
    | :--------- | :----------------------------------------------------------- |
-   | 拼写       | 遵循 [Merriam-Webster.com](https://www.merriam-webster.com/). See also [Spelling](https://developers.google.com/style/spelling). |
-   | 非技术样式 | 遵循 [*The Chicago Manual of Style*, 17th edition](https://www.chicagomanualofstyle.org/home.html) (需要订阅). |
-   | 技术样式   | 参考 [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/). 但是，请考虑微软的指导是否适用； 其中一些可能仅适用于Microsoft产品和界面。 |
+   | 拼写       | 遵循 [Merriam-Webster.com](https://www.merriam-webster.com/)![open_in_new_black_24dp](../../../assets/icons/open_in_new_black_24dp.svg). See also [Spelling](https://developers.google.com/style/spelling). |
+   | 非技术样式 | 遵循 [*The Chicago Manual of Style*, 17th edition](https://www.chicagomanualofstyle.org/home.html)![open_in_new_black_24dp](../../../assets/icons/open_in_new_black_24dp.svg) (需要订阅). |
+   | 技术样式   | 参考 [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/)![open_in_new_black_24dp](../../../assets/icons/open_in_new_black_24dp.svg). 但是，请考虑微软的指导是否适用； 其中一些可能仅适用于Microsoft产品和界面。 |
 
 ### 其他的编辑资源
 
@@ -30,24 +30,24 @@
 
 以下是技术社区提供的其他一些样式指南：
 
-- [Apple Style Guide](https://help.apple.com/applestyleguide/)
-- [IBM developer editorial style guide](https://www.ibm.com/developerworks/library/styleguidelines/index.html)
-- [Red Hat technical documentation style guide](https://stylepedia.net/)
+- [Apple Style Guide](https://help.apple.com/applestyleguide/)![open_in_new_black_24dp](../../../assets/icons/open_in_new_black_24dp.svg)
+- [IBM developer editorial style guide](https://www.ibm.com/developerworks/library/styleguidelines/index.html)![open_in_new_black_24dp](../../../assets/icons/open_in_new_black_24dp.svg)
+- [Red Hat technical documentation style guide![open_in_new_black_24dp](../../../assets/icons/open_in_new_black_24dp.svg)](https://stylepedia.net/)
 
 ### 此指南使用的标注
 
 有关仅适用于Android或Google Cloud文档的指导，请查阅以下徽标：
 
-![image-20210523064251865](assets/image-20210523064251865.png)遵循特定于Android文档的条款和准则。
+![android_black_24dp](../assets/android_black_24dp.svg)遵循特定于Android文档的条款和准则。
 
-![image-20210523064309419](assets/image-20210523064309419.png)遵循特定于Google Cloud文档的条款和准则。
+![cloud_black_24dp](../assets/cloud_black_24dp-1623474484675.svg)遵循特定于Google Cloud文档的条款和准则。
 
 ### 打破规则
 
 > *Break any of these rules sooner than say anything outright barbarous.*
 >
-> —George Orwell, "[Politics and the English Language](https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/)"
+> —George Orwell, "[Politics and the English Language](https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/)![open_in_new_black_24dp](../../../assets/icons/open_in_new_black_24dp.svg)"
 
 本指南包含准则，而不是规则。这样做可以改善您的内容。
 
-有关guideline和rule的区别可参阅[Guideline(s) vs rule(s)](https://english.stackexchange.com/questions/323089/guidelines-vs-rules)
+有关guideline和rule的区别可参阅[Guideline(s) vs rule(s)](https://english.stackexchange.com/questions/323089/guidelines-vs-rules)![open_in_new_black_24dp](../../../assets/icons/open_in_new_black_24dp.svg)
