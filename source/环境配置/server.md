@@ -135,25 +135,16 @@
 
   ```
   $ ls /usr/lib/jvm
-  java
-  java-1.8.0
-  java-1.8.0-openjdk
-  java-1.8.0-openjdk-1.8.0.282.b08-1.el7_9.x86_64
-  java-openjdk
-  jre
-  jre-1.8.0
-  jre-1.8.0-openjdk
-  jre-1.8.0-openjdk-1.8.0.282.b08-1.el7_9.x86_64
-  jre-openjdk
+  java  java-1.8.0  java-1.8.0-openjdk  java-1.8.0-openjdk-1.8.0.292.b10-1.el7_9.x86_64  java-openjdk  jre  jre-1.8.0  jre-1.8.0-openjdk  jre-1.8.0-openjdk-1.8.0.292.b10-1.el7_9.x86_64  jre-openjdk
   ```
-
+  
 * 在`/etc/profile`文件添加如下命令
 
   ```
   # set java environment  
-  JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64
-  PATH=$PATH:$JAVA_HOME/bin  
-  CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar  
+  JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.292.b10-1.el7_9.x86_64
+  PATH=$PATH:$JAVA_HOME/bin
+  CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
   export JAVA_HOME CLASSPATH PATH
   ```
 

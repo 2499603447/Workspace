@@ -2,66 +2,41 @@
 
 ## **Install JDK 8**
 
-1. 下载JDK的tar.gz包标题
-   加粗样式官网下载最新的JDK:https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
+1. 下载[Java 8或者更高版本](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 
-这里进入官网
+2. 解压软件包至你想安装的位置，如我解压至我自的工作目录workspace下
 
-PS:最新版本为jdk-8u241-linux-x64(现在下载还要登录Orz…)
+   > $ cd workspace
+   >
+   > $ tar zxvf xxx.tar.gz
 
-解压压缩包
-进入下载目录
+3. 配置环境变量
 
-cd ~/Download
+   编辑当前用户下的.bashrc文件
 
-解压tar.gz包
+   > $ vim ~/.bashrc
 
-tar -zxvf jdk-8u241-linux-x64.tar.gz
+   如果你不熟悉vim的使用，可以使用其他任意文本编辑工具，如gedit、sublime之类
 
-安装JDK
-sudo mv jdk1.8.0_241 /usr/lib/jvm/jdk1.8.0_241
+   在文件末尾添加上面的环境变量，保存退出
 
-JDK环境变量配置
-修改配置文件
-sudo vim /etc/profile
-在文件的末尾增加内容
+   > export JAVA_HOME={Use the absolute path of the installed Java 8}
+   > export JRE_HOME=${JAVA_HOME}/jre
+   > export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+   >
+   > export PATH=${JAVA_HOME}/bin:$PATH
 
-export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_241
-export JRE_HOME=${JAVA_HOME}/jre
-export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
-export PATH=${JAVA_HOME}/bin:$PATH
-1
-2
-3
-4
-使配置生效
-source /etc/profile
+4. 如果想在当前终端立即生效，我们需要执行如下命令
 
-测试
-查看JAVA版本
+   > $ source ~/.bashrc
 
-java -version
-输出
+5. 检查是否安装成功
 
-java version "1.8.0_241"
-Java(TM) SE Runtime Environment (build 1.8.0_241-b07)
-Java HotSpot(TM) 64-Bit Server VM (build 25.241-b07, mixed mode)
-1
-2
-3
-如上输出即表示已经正确安装，但是，不要着急，测试下是不是会出现再打开一个终端就会出现无法识别java命令的情况呢？如果是，那就还有最后一步。
-
-解决每次都要source /etc/profile的问题
-vim ~/.bashrc
-以下两种放方法都可以，推荐第二种方式。
-
-在里面添加配置环境变量
-
-在里面添加一句：
-
-source /etc/profile
-1
- 如果打开不同的终端输入java -version都没有问题的话就是可以了。
+   > $ java -version
+   >
+   > java version "1.8.0_291"
+   > Java(TM) SE Runtime Environment (build 1.8.0_291-b10)
+   > Java HotSpot(TM) 64-Bit Server VM (build 25.291-b10, mixed mode)
 
 ## <a name="Install Java 11">Install JDK 11</a>
 
@@ -81,17 +56,19 @@ source /etc/profile
 
 3. 配置环境变量
 
-   > export JAVA_HOME=/home/username/workspace/jdk-11.0.11
-   > export JRE_HOME=${JAVA_HOME}/jre
-   > export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
-   >
-   > export PATH=${JAVA_HOME}/bin:$PATH
-
-   编辑当前用户下的.bashrc文件，在文件末尾添加上面的环境变量，保存退出
+   编辑当前用户下的.bashrc文件
 
    > $ vim ~/.bashrc
 
    如果你不熟悉vim的使用，可以使用其他任意文本编辑工具，如gedit、sublime之类
+
+   在文件末尾添加上面的环境变量，保存退出
+
+   > export JAVA_HOME={Use the absolute path of the installed Java 11}
+   > export JRE_HOME=${JAVA_HOME}/jre
+   > export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+   >
+   > export PATH=${JAVA_HOME}/bin:$PATH
 
 4. 如果想在当前终端立即生效，我们需要执行如下命令
 
@@ -307,13 +284,13 @@ npm install --devDependencies
 
      在exec "$PRGDIR"/"$EXECUTABLE" start "$@"前面加上以下内容
 
-     > export JAVA_HOME=/home/lighthouse/workspace/jdk1.8.0_281
+     > export JAVA_HOME={Use the absolute path of the installed Java}
      > export JRE_HOME=${JAVA_HOME}/jre
      > export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
      > export PATH=${JAVA_HOME}/bin:$PATH 
-     > export TOMCAT_HOME=/home/lighthouse/workspace/apache-tomcat-9.0.44
+     > export TOMCAT_HOME={Use the absolute path of the installed Tomcat}
 
-     注意，JAVA_HOME要更改为你电脑的JDK所在目录。保存，退出。
+     注意，JAVA_HOME要更改为你电脑i的JDK所在目录。保存，退出。
 
    * 编辑shutdown.sh文件。
 
@@ -321,15 +298,15 @@ npm install --devDependencies
 
      在exec "$PRGDIR"/"$EXECUTABLE" stop "$@" 前面加上以下内容：
 
-     > export JAVA_HOME=/home/lighthouse/workspace/jdk1.8.0_281
+     > export JAVA_HOME={Use the absolute path of the installed Java}
      > export JRE_HOME=${JAVA_HOME}/jre
      > export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
      > export PATH=${JAVA_HOME}/bin:$PATH 
-     > export TOMCAT_HOME=/home/lighthouse/workspace/apache-tomcat-9.0.44
+     > export TOMCAT_HOME={Use the absolute path of the installed Tomcat}
 
      配置环境变量
 
-     > export CATALINA_HOME=/home/lighthouse/workspace/apache-tomcat-9.0.44
+     > export CATALINA_HOME={Use the absolute path of the installed Tomcat}
      > export PATH=${CATALINA_HOME}/lib:${CATALINA_HOME}/bin:$PATH
 
 4. 启动
@@ -376,15 +353,15 @@ npm install --devDependencies
    User=tomcat
    Group=tomcat
    
-   Environment=JAVA_HOME=/home/lighthouse/workspace/jdk-11.0.11
+   Environment=JAVA_HOME={Use the absolute path of the installed Java}
    Environment='JAVA_OPTS=-Djava.awt.headless=true'
-   Environment=CATALINA_BASE=/home/lighthouse/workspace/apache-tomcat-10.0.5
-   Environment=CATALINA_HOME=/home/lighthouse/workspace/apache-tomcat-10.0.5
-   Environment=CATALINA_PID=/home/lighthouse/workspace/apache-tomcat-10.0.5/temp/tomcat.pid
+   Environment=CATALINA_BASE={Use the absolute path of the installed Tomcat}
+   Environment=CATALINA_HOME={Use the absolute path of the installed Tomcat}
+   Environment=CATALINA_PID={Use the absolute path of the installed Tomcat}/temp/tomcat.pid
    Environment='CATALINA_OPTS=-Xms512M -Xmx1G -Djava.net.preferIPv4Stack=true'
    
-   ExecStart=/home/lighthouse/workspace/apache-tomcat-10.0.5/bin/startup.sh
-   ExecStop=/home/lighthouse/workspace/apache-tomcat-10.0.5/bin/shutdown.sh
+   ExecStart={Use the absolute path of the installed Tomcat}/bin/startup.sh
+   ExecStop={Use the absolute path of the installed Tomcat}/bin/shutdown.sh
    
    [Install]
    WantedBy=multi-user.target
