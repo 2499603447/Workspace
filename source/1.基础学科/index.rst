@@ -12,7 +12,7 @@
 
 本章目录如下
 
-.. toctree::
+.. toctree::   
    :maxdepth: 2
    
    数学/index
