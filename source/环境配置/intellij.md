@@ -30,15 +30,11 @@ Editor下的File and Code Templates，然后点击右侧的Includes，选择File
 
 首先，点击左上角的 “File”，选择 “settings”，或直接按快捷键Ctrl+Alt+s
 
-选择“Editor”-“general”-“auto import”
-
-在右侧将空勾选
+选择“Editor”-“general”-“auto import”，在右侧将空勾选
 
 ![image-20210801213307848](assets/image-20210801213307848.png)
 
 ## 插件工具
-
-*以下非原创，来源不详，待check*
 
 ### CheckStyle
 
