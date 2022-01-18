@@ -350,9 +350,41 @@ systemctl enable tomcat.service
 
 ### 安装puty
 
-> $ sudo apt-get install putty
+> $ sudo apt-get install put#ty
 
 ### 拷贝项目至云服务器
 
 > $ pscp site.tgz root@xxx.xxx.xxx.xxx:/usr/share/tomcat/webapps
 
+## 本地IDEA项目部署至阿里云
+
+https://www.cnblogs.com/xl5230/p/11726548.html
+
+## 搭建自己的Nexus服务
+
+## 发布构建到Maven
+
+最初想到发布构建到maven，是由于自己编写的通用构建只能本地通过模块间的引用，换了其他设备之后，便又要重新下载，手动重新导入工程；操作繁琐，使用不便。
+
+因此，想到将自己的通用构建发布到maven上，这样**换设备**，以及**其他人想要用**该构建；只需要通过简单的几行引用就可以搞定；省去了自己去手动下载，导入这些繁琐的步骤。
+
+### 要求
+
+1. 解决跨设备之间引用不便的问题
+2. 所有人共享，并不能只是自己能够用
+
+### 调研
+
+目前现有的几种发布构建到maven中的方式有
+
+#### 以静态文件发布
+
+该种方式是将我们待发布的内容推送至GitHub上，这样即可作为静态网站访问Maven的repo。
+
+
+
+### 参考文献
+
+1. [GitHub Doc 使用 Maven 发布 Java 包](https://docs.github.com/cn/actions/publishing-packages/publishing-java-packages-with-maven)
+2. [Guide to uploading artifacts to the Central Repository](http://maven.apache.org/repository/guide-central-repository-upload.html#guide-to-uploading-artifacts-to-the-central-repository)
+3. [发布Maven包的正确姿势](https://zhuanlan.zhihu.com/p/141676033)
