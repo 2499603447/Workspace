@@ -121,6 +121,14 @@
 
    > python get-pip.py
 
+4. 更新
+
+   python -m pip install --upgrade pip
+
+5. pip安装requirements
+
+   pip install -r requirements.txt
+
 ## Install Mkdocs
 
 ### 安装
@@ -509,4 +517,22 @@ npm install --devDependencies
 7. 再次访问localhost:8080/source，成功出现索引页面
 
 ## Install Sphinx
+
+pip安装sphnix
+
+pip3 install sphinx sphinx-autobuild
+
+
+
+
+
+
+
+1.sphinx-quickstart
+
+按照提示输入对应的项目名，作者，版本号等信息
+
+2.make html
+
+编译生成html文档
 
