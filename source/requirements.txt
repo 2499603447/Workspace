@@ -3,3 +3,4 @@ recommonmark==0.7.1
 Sphinx==5.3.0
 sphinx-markdown-tables==0.0.17
 sphinx-material
+sphinx-theme
