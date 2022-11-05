@@ -522,12 +522,6 @@ pip安装sphnix
 
 pip3 install sphinx sphinx-autobuild
 
-
-
-
-
-
-
 1.sphinx-quickstart
 
 按照提示输入对应的项目名，作者，版本号等信息
